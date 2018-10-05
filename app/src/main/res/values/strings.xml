@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GoF</string>
+
+    <string name="iterator">Iterator</string>
+</resources>
