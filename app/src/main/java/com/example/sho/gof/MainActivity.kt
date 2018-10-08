@@ -3,6 +3,9 @@ package com.example.sho.gof
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.example.sho.gof.adapter.DirectCurrent
+import com.example.sho.gof.adapter.AlternatingCurrent
 import com.example.sho.gof.iterator.Instance
 import com.example.sho.gof.observer.DigitObserver
 import com.example.sho.gof.observer.NumberGenerator
@@ -35,6 +38,11 @@ class MainActivity : AppCompatActivity(){
             val observer: Observer = DigitObserver()
             generator.addObserver(observer)
             generator.execute()
+        }
+
+        adapter_button.setOnClickListener {
+            val ac = AlternatingCurrent(DirectCurrent(12.0F))
+            ac.show()
         }
     }
 }
