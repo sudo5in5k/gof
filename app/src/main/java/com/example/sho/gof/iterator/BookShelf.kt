@@ -2,12 +2,13 @@ package com.example.sho.gof.iterator
 
 /**
  * 本棚のクラス
+ * 具体的なAggregator
  *
  *
  * Created by sho on 2018/10/04.
  */
 
-class BookShelf: Aggregate {
+class BookShelf : Aggregate {
     override val iterator: Iterator
         get() = BookShelfIterator(this)
 

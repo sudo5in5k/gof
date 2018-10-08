@@ -2,4 +2,10 @@
     <string name="app_name">GoF</string>
 
     <string name="iterator">Iterator</string>
+    <string name="state">State</string>
+    <string name="safe_use">金庫使用</string>
+    <string name="emergency">非常ベル</string>
+    <string name="call">通常通話</string>
+    <string name="change_state">状態変化</string>
+    <string name="observer">Observer</string>
 </resources>

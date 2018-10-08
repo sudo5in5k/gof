@@ -3,7 +3,7 @@ package com.example.sho.gof.iterator
 import android.util.Log
 
 /**
- * TODO クラス説明
+ * BookShelfのインスタンス
  *
  * Created by sho on 2018/10/04.
  */

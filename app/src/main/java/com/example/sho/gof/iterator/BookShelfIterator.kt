@@ -1,7 +1,7 @@
 package com.example.sho.gof.iterator
 
 /**
- * TODO クラス説明
+ * Bookクラスに対するConcrete Iterator
  *
  * Created by sho on 2018/10/04.
  */
