@@ -31,4 +31,16 @@
         android:layout_height="wrap_content"
         android:text="@string/adapter" />
 
+    <Button
+        android:id="@+id/template_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/template" />
+
+    <Button
+        android:id="@+id/singleton_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/singleton" />
+
 </LinearLayout>

@@ -9,4 +9,6 @@
     <string name="change_state">状態変化</string>
     <string name="observer">Observer</string>
     <string name="adapter">adapter</string>
+    <string name="template">template</string>
+    <string name="singleton">singleton</string>
 </resources>
