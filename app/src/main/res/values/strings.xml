@@ -11,4 +11,5 @@
     <string name="adapter">adapter</string>
     <string name="template">template</string>
     <string name="singleton">singleton</string>
+    <string name="builder">builder</string>
 </resources>

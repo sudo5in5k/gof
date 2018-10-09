@@ -3,16 +3,18 @@ package com.example.sho.gof
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.text.style.TtsSpan
 import android.util.Log
 import com.example.sho.gof.adapter.AlternatingCurrent
 import com.example.sho.gof.adapter.DirectCurrent
+import com.example.sho.gof.builder.Director
+import com.example.sho.gof.builder.TextBuilder
 import com.example.sho.gof.iterator.Instance
 import com.example.sho.gof.observer.DigitObserver
 import com.example.sho.gof.observer.NumberGenerator
 import com.example.sho.gof.observer.Observer
 import com.example.sho.gof.observer.RandomNumberGenerator
 import com.example.sho.gof.singleton.Singleton
-import com.example.sho.gof.state.DayState
 import com.example.sho.gof.state.StateActivity
 import com.example.sho.gof.template.AbstractDisplay
 import com.example.sho.gof.template.CharDisplay
@@ -65,6 +67,13 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Log.d(TAG, "両者のインスタンスは等しくありません")
             }
+        }
+
+        builder_button.setOnClickListener {
+            val textBuilder = TextBuilder()
+            val director = Director(textBuilder)
+            director.construct()
+            Log.d(TAG, textBuilder.buffer.toString())
         }
     }
 }
