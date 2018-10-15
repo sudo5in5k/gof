@@ -6,5 +6,5 @@ package com.example.sho.gof.observer
  * Created by sho on 2018/10/08.
  */
 interface Observer {
-    fun update(generator: NumberGenerator)
+    fun inspect(events: Events)
 }

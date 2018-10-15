@@ -3,17 +3,13 @@ package com.example.sho.gof
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.text.style.TtsSpan
 import android.util.Log
 import com.example.sho.gof.adapter.AlternatingCurrent
 import com.example.sho.gof.adapter.DirectCurrent
 import com.example.sho.gof.builder.Director
 import com.example.sho.gof.builder.TextBuilder
 import com.example.sho.gof.iterator.Instance
-import com.example.sho.gof.observer.DigitObserver
-import com.example.sho.gof.observer.NumberGenerator
-import com.example.sho.gof.observer.Observer
-import com.example.sho.gof.observer.RandomNumberGenerator
+import com.example.sho.gof.observer.*
 import com.example.sho.gof.singleton.Singleton
 import com.example.sho.gof.state.StateActivity
 import com.example.sho.gof.template.AbstractDisplay
@@ -41,10 +37,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         observer_button.setOnClickListener {
-            val generator: NumberGenerator = RandomNumberGenerator()
-            val observer: Observer = DigitObserver()
-            generator.addObserver(observer)
-            generator.execute()
+            val earthquakeEvents: Events = EarthquakeEvents()
+            val bigEarthQuakeObserver: Observer = BigEarthquakeObserver()
+            val smallEarthQuakeObserver: Observer = SmallEarthquakeObserver()
+            earthquakeEvents.addObserver(bigEarthQuakeObserver)
+            earthquakeEvents.addObserver(smallEarthQuakeObserver)
+            earthquakeEvents.execute()
         }
 
         adapter_button.setOnClickListener {

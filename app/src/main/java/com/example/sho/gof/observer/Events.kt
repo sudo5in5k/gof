@@ -1,11 +1,11 @@
 package com.example.sho.gof.observer
 
 /**
- * 数を生成する抽象クラス
+ * イベント Subject
  *
  * Created by sho on 2018/10/08.
  */
-abstract class NumberGenerator {
+abstract class Events {
 
     private val observers = ArrayList<Observer>()
     var number = 0
@@ -14,18 +14,13 @@ abstract class NumberGenerator {
         observers.add(observer)
     }
 
-    fun deleteObserver(observer: Observer) {
-        observers.remove(observer)
-    }
-
     fun notifyObservers() {
         val iterator: MutableIterator<Observer> = observers.iterator()
         while (iterator.hasNext()) run {
             val observer: Observer = iterator.next()
-            observer.update(this)
+            observer.inspect(this)
         }
     }
 
-    open fun execute() {
-    }
+    abstract fun execute()
 }
