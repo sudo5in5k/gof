@@ -12,4 +12,5 @@
     <string name="template">template</string>
     <string name="singleton">singleton</string>
     <string name="builder">builder</string>
+    <string name="factory_method">Factory method</string>
 </resources>

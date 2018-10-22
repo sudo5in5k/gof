@@ -3,7 +3,7 @@ package com.example.sho.gof.observer
 import java.util.*
 
 /**
- * TODO クラス説明
+ * 大きい地震を検知する Concrete Observer
  *
  * Created by sho on 2018/10/08.
  */
@@ -17,5 +17,4 @@ class EarthquakeEvents : Events() {
             notifyObservers()
         }
     }
-
 }

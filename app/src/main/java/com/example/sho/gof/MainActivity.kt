@@ -8,6 +8,8 @@ import com.example.sho.gof.adapter.AlternatingCurrent
 import com.example.sho.gof.adapter.DirectCurrent
 import com.example.sho.gof.builder.Director
 import com.example.sho.gof.builder.TextBuilder
+import com.example.sho.gof.factory.Shape
+import com.example.sho.gof.factory.ShapeFactory
 import com.example.sho.gof.iterator.Instance
 import com.example.sho.gof.observer.*
 import com.example.sho.gof.singleton.Singleton
@@ -72,6 +74,17 @@ class MainActivity : AppCompatActivity() {
             val director = Director(textBuilder)
             director.construct()
             Log.d(TAG, textBuilder.buffer.toString())
+        }
+
+        factory_method.setOnClickListener {
+            val factory = ShapeFactory()
+            val shape1 = factory.create("Circle")
+            val shape2 = factory.create("Square")
+            val shape3 = factory.create("Star")
+
+            shape1.fit()
+            shape2.fit()
+            shape3.fit()
         }
     }
 }
