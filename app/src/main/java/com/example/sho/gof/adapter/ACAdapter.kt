@@ -20,5 +20,4 @@ class ACAdapter(private var dc: DirectCurrent) : Volt {
     fun show() {
         Log.d(ACAdapter::class.java.name, volt.toString())
     }
-
 }
