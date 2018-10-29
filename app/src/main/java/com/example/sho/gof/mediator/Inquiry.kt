@@ -5,8 +5,8 @@ package com.example.sho.gof.mediator
  *
  * Created by sho on 2018/10/24.
  */
-data class Inquiry(username: String = "Bob", mediator: Mediator) {
-
-    abstract fun request(msg: String)
-    abstract fun response(msg: String)
-}
+//data class Inquiry(username: String = "Bob", mediator: Mediator) {
+//
+//    abstract fun request(msg: String)
+//    abstract fun response(msg: String)
+//}

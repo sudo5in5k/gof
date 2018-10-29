@@ -10,7 +10,7 @@ import android.util.Log
  */
 class Helpdesk : Mediator() {
 
-    val dev: Dev = Dev()
+    //val dev: Dev = Dev()
     override fun add_inquiry(inquiry: Inquiry) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
