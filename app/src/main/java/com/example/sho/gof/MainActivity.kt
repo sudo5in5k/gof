@@ -4,11 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import com.example.sho.gof.adapter.AlternatingCurrent
+import com.example.sho.gof.adapter.ACAdapter
 import com.example.sho.gof.adapter.DirectCurrent
 import com.example.sho.gof.builder.Director
 import com.example.sho.gof.builder.TextBuilder
-import com.example.sho.gof.factory.Shape
 import com.example.sho.gof.factory.ShapeFactory
 import com.example.sho.gof.iterator.Instance
 import com.example.sho.gof.observer.*
@@ -48,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         adapter_button.setOnClickListener {
-            val ac = AlternatingCurrent(DirectCurrent(12.0F))
+            val ac = ACAdapter(DirectCurrent(12.0F))
             ac.show()
         }
 
